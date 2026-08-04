@@ -1,0 +1,2 @@
+analysis,cohort_n,analytic_n,experimental_unit,predictor,outcome,test,rho,p_two_sided,pearson_r_sensitivity,pearson_p_two_sided
+Dataset 1 map predicting Dataset 2 NRS-02,181,181,participant-level lesion connectivity map,Fisher-z transformed spatial correlation between each Dataset 2 lesion-connectivity map and the Dataset 1 primary map,NRS-02 somatic concern,Spearman rank correlation,0.23272094124980391,0.0016179603516363647,0.17652195374140137,0.017449160507799717

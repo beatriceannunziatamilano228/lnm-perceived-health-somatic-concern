@@ -1,0 +1,20 @@
+field,value
+release,v1.0.0
+dataset1_primary_analytic_n,101
+dataset2_cohort_n,181
+dataset2_primary_complete_case_n,173
+cross_dataset_spatial_r_raw_maps,0.5901948520597905
+cross_dataset_spatial_r_fisher_z_maps,0.5887611658624597
+figure3_spearman_rho,0.23272094124980391
+figure3_spearman_p,0.0016179603516363647
+figure3_n,181
+nrs02_item_level_rank,1
+nrs02_item_level_spatial_r,0.5887611658624601
+anatomy_conditioned_permutations,100000
+anatomy_conditioned_two_sided_p,0.04049959500404996
+maxstat_permutations,10000
+maxstat_two_sided_FWE_threshold_abs_r,0.28064417839050293
+maxstat_global_pFWE,0.0057994200579942
+maxstat_significant_voxels,35
+historical_peak_MNI,"[28, 40, -22]"
+interpretation,"The two datasets show moderate cross-dataset spatial correspondence. The anatomy-conditioned test supports correspondence beyond lesion anatomy alone, while the combined map and stimulation targets remain exploratory."

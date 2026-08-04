@@ -1,0 +1,21 @@
+{
+  "dataset1_complete_case_n": 101,
+  "dataset2_complete_case_n": 173,
+  "dataset2_weight_used": 173,
+  "weighting": "effective",
+  "n_voxels": 285903,
+  "cross_dataset_fisher_z_spatial_r": 0.5887611554288521,
+  "observed_combined_positive_max": 0.32083113350137304,
+  "observed_combined_absolute_max": 0.32083113350137304,
+  "n_permutations": 10000,
+  "seed": 20260731,
+  "two_sided_FWE_threshold": 0.28064417839050293,
+  "two_sided_global_pFWE": 0.0057994200579942,
+  "one_sided_FWE_threshold": 0.27134257555007935,
+  "one_sided_global_pFWE": 0.0038996100389961006,
+  "significant_voxels_two_sided": 35,
+  "significant_positive_voxels": 35,
+  "significant_negative_voxels": 0,
+  "dataset1_design_rank": 28,
+  "dataset2_design_rank": 28
+}

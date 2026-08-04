@@ -1,0 +1,9 @@
+analysis,cohort_n,available_outcome_n,analytic_n,missing_data_rule,analytic_n_with_covariates,analytic_n_without_covariates
+Dataset 1 primary covariate-adjusted map,101,101,101,complete case across SF-02 and 27 supplied covariates,,
+Dataset 2 primary covariate-adjusted map,181,181,173,"complete case across NRS-02, remaining NRS items, and supplied lesion-size covariate",,
+Figure 3 forward prediction (Dataset 1 map -> Dataset 2 NRS-02),181,181,181,requires NRS-02 and lesion-connectivity map only,,
+Historical reverse prediction (Dataset 2 map -> Dataset 1 SF-02),101,101,101,complete case across SF-02 and supplied covariates,,
+Figure 4 adjusted item-level comparison,181,181,173,common complete-case model across all 27 NRS items plus supplied lesion-size covariate,,
+Figure 4 unadjusted sensitivity,181,175-181 depending on item,175-181 depending on item,item-specific available cases,,
+Supplementary Figure S1 Dataset 1,101,101,,,101.0,101.0
+Supplementary Figure S1 Dataset 2,181,181,,,173.0,181.0

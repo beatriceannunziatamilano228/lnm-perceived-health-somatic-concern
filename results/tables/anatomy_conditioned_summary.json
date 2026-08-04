@@ -1,0 +1,17 @@
+{
+  "corbetta_n": 101,
+  "grafman_n_complete_case": 173,
+  "n_voxels": 285903,
+  "observed_spatial_r_raw_maps": 0.5901948520597905,
+  "observed_spatial_r_fisher_z_check": 0.5887611658624597,
+  "n_permutations": 100000,
+  "seed": 20260724,
+  "one_sided_permutation_p": 0.01985980140198598,
+  "two_sided_permutation_p": 0.04049959500404996,
+  "one_sided_exceedances": 1985,
+  "two_sided_exceedances": 4049,
+  "null_mean": -0.0005861152839535776,
+  "null_sd": 0.3292440224076294,
+  "null_2_5_percentile": -0.5775048064137627,
+  "null_97_5_percentile": 0.575435541610652
+}

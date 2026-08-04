@@ -1,0 +1,2 @@
+analysis,cohort_n,analytic_n,experimental_unit,test_primary,partial_spearman_rho,partial_spearman_p_two_sided,partial_pearson_r,partial_pearson_p_two_sided,recommendation
+Dataset 2 map predicting Dataset 1 SF-02,101,101,participant-level lesion connectivity map,partial Spearman correlation controlling Dataset 1 covariates,0.07354270102515147,0.5334738817806159,0.1648037390523603,0.16056480373783713,Do not report as confirmatory validation; historical exploratory analysis was non-significant.

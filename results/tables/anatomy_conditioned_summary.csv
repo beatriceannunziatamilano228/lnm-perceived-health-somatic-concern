@@ -1,0 +1,2 @@
+corbetta_n,grafman_n_complete_case,n_voxels,observed_spatial_r_raw_maps,observed_spatial_r_fisher_z_check,n_permutations,seed,one_sided_permutation_p,two_sided_permutation_p,one_sided_exceedances,two_sided_exceedances,null_mean,null_sd,null_2_5_percentile,null_97_5_percentile
+101,173,285903,0.5901948520597905,0.5887611658624597,100000,20260724,0.01985980140198598,0.04049959500404996,1985,4049,-0.0005861152839535776,0.3292440224076294,-0.5775048064137627,0.575435541610652
