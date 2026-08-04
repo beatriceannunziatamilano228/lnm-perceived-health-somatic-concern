@@ -9,12 +9,7 @@ This repository is the public code release accompanying the revised manuscript. 
 - group-level NIfTI maps and permutation null distributions;
 - a clear crosswalk between manuscript claims, analysis scripts, and output files.
 
-**The authors do not need to rerun the analyses locally for resubmission.** The validated
-outputs used for the revision are already included under `results/`. The code is provided so
-editors and readers can inspect the implementation and, where authorized data access is
-available, reproduce the analysis.
-
-## Headline validated results
+## Results
 
 - Dataset 1 primary analytic sample: **n = 101**.
 - Dataset 2 cohort: **n = 181**; complete-case primary model: **n = 173**.
