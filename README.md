@@ -1,6 +1,6 @@
 # Lesion network mapping of perceived health change and somatic concern
 
-## Validated code and frozen outputs for the Brain Communications revision
+##
 
 This repository is the public code release accompanying the revised manuscript. It contains:
 
