@@ -1,0 +1,83 @@
+function tableOut = run_nrs_item_level_analysis(dataDir, outputDir, referenceNifti)
+%RUN_NRS_ITEM_LEVEL_ANALYSIS Reconstruct Figure 4 item-level comparisons.
+% For each NRS item, this function generates:
+%   1) an adjusted map controlling for the other 26 NRS items and lesion size;
+%   2) a lesion-size-only map, corresponding to the manuscript sensitivity
+%      analysis performed without controlling for the remaining NRS items.
+% Rankings are descriptive; no inferential test compares item correlations.
+
+arguments
+    dataDir (1,1) string
+    outputDir (1,1) string = "outputs/nrs_item_level"
+    referenceNifti (1,1) string = ""
+end
+addpath(fullfile(fileparts(mfilename("fullpath")), "functions"));
+data = load_lnm_inputs(dataDir);
+if ~isfolder(outputDir), mkdir(outputDir); end
+
+names = [ ...
+"comprehension deficit"; "somatic concern"; "guilt feelings"; ...
+"inaccurate insight and self-appraisal"; "expressive deficit"; "tension"; ...
+"conceptual disorganization"; "inattention/reduced alertness"; ...
+"blunted affect"; "disorientation"; "speech articulation defect"; ...
+"lability of mood"; "agitation"; "hostility/uncooperativeness"; ...
+"depressive mood"; "emotional withdrawal"; "unusual thought content"; ...
+"hallucinatory behaviour"; "motor retardation"; "fatigability"; ...
+"memory deficit"; "excitement"; "poor planning"; "anxiety"; ...
+"suspiciousness"; "disinhibition"; "decreased initiative/motivation"];
+
+map1 = partial_correlation_map(data.dataset1.maps, ...
+    data.dataset1.outcome, data.dataset1.covariates);
+
+adjustedR = nan(27,1);
+lesionSizeOnlyR = nan(27,1);
+adjustedN = nan(27,1);
+lesionSizeOnlyN = nan(27,1);
+adjustedMaps = nan(size(data.dataset2.maps,1),27,"single");
+lesionSizeOnlyMaps = nan(size(data.dataset2.maps,1),27,"single");
+
+for item = 1:27
+    others = setdiff(1:27,item);
+
+    adjustedCovariates = [data.dataset2.nrs(:,others), ...
+        data.dataset2.lesionSize];
+    [adjustedMap, adjustedValid] = partial_correlation_map( ...
+        data.dataset2.maps, data.dataset2.nrs(:,item), adjustedCovariates);
+
+    [lesionSizeOnlyMap, lesionSizeOnlyValid] = partial_correlation_map( ...
+        data.dataset2.maps, data.dataset2.nrs(:,item), ...
+        data.dataset2.lesionSize);
+
+    adjustedMaps(:,item) = single(adjustedMap);
+    lesionSizeOnlyMaps(:,item) = single(lesionSizeOnlyMap);
+    adjustedR(item) = fisher_spatial_correlation(map1,adjustedMap);
+    lesionSizeOnlyR(item) = fisher_spatial_correlation(map1,lesionSizeOnlyMap);
+    adjustedN(item) = nnz(adjustedValid);
+    lesionSizeOnlyN(item) = nnz(lesionSizeOnlyValid);
+
+    if strlength(referenceNifti)>0
+        write_masked_nifti(adjustedMap, referenceNifti, ...
+            fullfile(outputDir,sprintf("NRS_%02d_adjusted_partial_r.nii.gz",item)));
+        write_masked_nifti(lesionSizeOnlyMap, referenceNifti, ...
+            fullfile(outputDir,sprintf("NRS_%02d_lesion_size_only_partial_r.nii.gz",item)));
+    end
+end
+
+adjustedRank = tiedrank(-adjustedR);
+lesionSizeOnlyRank = tiedrank(-lesionSizeOnlyR);
+tableOut = table((1:27)', names, adjustedN, adjustedR, adjustedRank, ...
+    lesionSizeOnlyN, lesionSizeOnlyR, lesionSizeOnlyRank, (1:27)'==2, ...
+    'VariableNames', {"NRS_item_number","NRS_item_name", ...
+    "adjusted_complete_case_n","spatial_r_adjusted_map_vs_dataset1", ...
+    "adjusted_rank_descending","lesion_size_only_complete_case_n", ...
+    "spatial_r_lesion_size_only_map_vs_dataset1", ...
+    "lesion_size_only_rank_descending","is_primary_outcome"});
+
+writetable(sortrows(tableOut,"spatial_r_adjusted_map_vs_dataset1","descend"), ...
+    fullfile(outputDir,"nrs_item_level_correlations_adjusted_ranked.csv"));
+writetable(sortrows(tableOut,"spatial_r_lesion_size_only_map_vs_dataset1","descend"), ...
+    fullfile(outputDir,"nrs_item_level_correlations_lesion_size_only_ranked.csv"));
+writetable(tableOut, fullfile(outputDir,"nrs_item_level_correlations_by_item.csv"));
+save(fullfile(outputDir,"nrs_item_level_maps.mat"), ...
+    "adjustedMaps","lesionSizeOnlyMaps","-v7.3");
+end

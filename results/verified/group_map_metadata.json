@@ -1,0 +1,42 @@
+{
+  "combined_map": {
+    "shape": [
+      91,
+      109,
+      91
+    ],
+    "voxel_size_mm": [
+      2,
+      2,
+      2
+    ],
+    "nonzero_voxels": 285903,
+    "minimum": -0.23359666764736176,
+    "maximum": 0.3304135501384735,
+    "maximum_mni": [
+      28.0,
+      40.0,
+      -22.0
+    ]
+  },
+  "target_connectivity_map": {
+    "shape": [
+      91,
+      109,
+      91
+    ],
+    "voxel_size_mm": [
+      2,
+      2,
+      2
+    ],
+    "nonzero_voxels": 292019,
+    "minimum": -0.8014236688613892,
+    "maximum": 0.803277850151062,
+    "maximum_mni": [
+      0.0,
+      32.0,
+      40.0
+    ]
+  }
+}

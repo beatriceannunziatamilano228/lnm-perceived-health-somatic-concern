@@ -1,0 +1,75 @@
+{
+  "software": "SimNIBS 4.1.0",
+  "head_model": "MNI152 example head model (m2m_MNI152/MNI152.msh)",
+  "coil_model": "Drakaki_BrainStim_2022/MagVenture_MCF-B65_new.ccd",
+  "conductivity": "isotropic/scalar",
+  "fields": "eED",
+  "map_to_volume": true,
+  "map_to_MNI": true,
+  "positions": [
+    {
+      "name": "Fpz_dACC",
+      "matsimnibs": [
+        [
+          0.0,
+          0.99926,
+          0.038343,
+          -0.70611
+        ],
+        [
+          0.079782,
+          0.038221,
+          -0.99608,
+          89.465
+        ],
+        [
+          -0.99681,
+          0.0030591,
+          -0.079723,
+          -4.6399
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "recorded_coil_cortex_distance_mm": 19.26,
+      "didt_A_per_s": 1000000,
+      "didt_note": "Not explicit in final log; set to 1e6 A/s to match the recovered Fp1 session and the simulation series."
+    },
+    {
+      "name": "Fp1_OFC",
+      "matsimnibs": [
+        [
+          -1.38777878e-17,
+          0.897386211,
+          0.441245949,
+          -31.2153131
+        ],
+        [
+          0.220737822,
+          0.430361815,
+          -0.875250548,
+          84.110425
+        ],
+        [
+          -0.975333181,
+          0.0973996697,
+          -0.198087078,
+          -8.39749825
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "recorded_coil_cortex_distance_mm": 18.12,
+      "didt_A_per_s": 1000000,
+      "session_distance_mm": 4.0
+    }
+  ]
+}

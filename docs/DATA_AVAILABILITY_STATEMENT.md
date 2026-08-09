@@ -1,9 +1,3 @@
-# Data availability statement
+# Manuscript-ready data availability statement
 
-This study used de-identified data from two independently collected cohorts. Participant-level
-and participant-derived data are governed by the institutions responsible for the original
-studies and may be available upon reasonable request to the respective research teams,
-subject to institutional, legal and ethical restrictions. The public code repository includes
-validated analysis code, input schemas, non-identifiable summary tables, group-level
-statistical maps and permutation null distributions, but does not include participant-level
-connectivity matrices or behavioral data.
+Participant-level data, individual lesion masks, and participant-derived lesion-connectivity matrices are not publicly redistributed because access is governed by the source institutions and the ethical and legal conditions under which the two cohorts were collected. Access may be requested from the respective data-owning research teams, subject to institutional approval. The public repository includes input schemas, analysis code, non-identifiable group-level statistical maps, target maps, permutation null distributions, and summary tables sufficient to document the reported analysis workflow.

@@ -1,0 +1,4 @@
+image_id	name	role	persistent_identifier	collection_id	related_article_doi
+795500	Modality Specific Anosognosia Network Results	sensitivity/provenance	https://identifiers.org/neurovault.image:795500	13792	10.1002/ana.26709
+795501	Cross-modal Anosognosia Results	primary external comparator	https://identifiers.org/neurovault.image:795501	13792	10.1002/ana.26709
+795502	Modality Specific Deficit Network Results	sensitivity/provenance	https://identifiers.org/neurovault.image:795502	13792	10.1002/ana.26709

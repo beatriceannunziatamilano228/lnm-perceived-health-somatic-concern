@@ -1,0 +1,3 @@
+target,mni_x,mni_y,mni_z,voxel_i,voxel_j,voxel_k,target_map_value
+pre-SMA/dACC,0,32,38,45,79,55,0.8000459671020508
+lateral OFC,-28,54,-10,59,90,31,0.7935009598731995

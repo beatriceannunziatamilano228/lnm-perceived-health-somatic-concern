@@ -1,75 +1,80 @@
-# Lesion network mapping of perceived health change and somatic concern
+# Lesion network mapping of perceived health and somatic concern
 
-## Validated code and frozen outputs for the Brain Communications revision
+Versioned analysis-code and non-identifiable group-output repository accompanying the revised manuscript:
 
-This repository is the public code release accompanying the revised manuscript. It contains:
+**Milano BA et al. _Lesion network mapping of perceived health and somatic concern_. Brain Communications. Manuscript BRAINCOM-2025-1125.R1.**
 
-- the cleaned Python code used to validate the reported analyses;
-- frozen, non-identifiable outputs generated from the validated study inputs;
-- group-level NIfTI maps and permutation null distributions;
-- a clear crosswalk between manuscript claims, analysis scripts, and output files.
+## Repository scope
 
-**The authors do not need to rerun the analyses locally for resubmission.** The validated
-outputs used for the revision are already included under `results/`. The code is provided so
-editors and readers can inspect the implementation and, where authorized data access is
-available, reproduce the analysis.
+This release separates five analytically distinct components:
 
-## Headline validated results
+1. **Recovered historical MATLAB code** — path-sanitized working scripts retained for provenance.
+2. **Modular MATLAB manuscript analyses** — primary maps, cross-dataset analyses, item-level comparisons, historical combined map, additional Dataset 1 controls and no-covariate sensitivity analyses.
+3. **Python analyses introduced during peer review** — anatomy-conditioned permutation and corrected maximum-statistic inference.
+4. **FSL cluster localization** — exact historical r thresholds, 26-connectivity, 40-voxel/320 mm³ extent criterion, frozen cluster tables and Harvard-Oxford atlas queries.
+5. **External and stimulation workflows** — NeuroVault-based anosognosia-map retrieval/comparison, the externally generated group-level target-connectivity output, and SimNIBS reconstruction parameters.
 
-- Dataset 1 primary analytic sample: **n = 101**.
-- Dataset 2 cohort: **n = 181**; complete-case primary model: **n = 173**.
-- Cross-dataset spatial correspondence: **r = 0.590** on raw partial-correlation maps
-  and **r = 0.589** after Fisher transformation.
-- Dataset 1 network predicting Dataset 2 NRS-02: **Spearman rho = 0.233,
-  p = 0.00162, n = 181**.
-- NRS-02 showed the largest adjusted item-level map correspondence among the 27 NRS items.
-- Anatomy-conditioned permutation analysis: **100,000 permutations,
-  two-sided empirical p = 0.0405**.
-- Whole-brain maximum-statistic correction: **10,000 permutations,
-  pFWE = 0.0058**, threshold **|r| = 0.28064**, with **35 significant voxels**
-  in the medial orbitofrontal cluster; historical peak **MNI [28, 40, -22]**.
+All directory names, documentation and public-facing filenames are in English.
 
-## Repository contents
+## Directory structure
 
 ```text
-analysis/       Cleaned Python analysis code
-src/            Shared numerical functions
-results/        Frozen validated tables, maps, figures and null distributions
-docs/           Methods, code/data statements and manuscript-output crosswalk
-data/           Input schema only; participant-level inputs are not distributed
-provenance/     Sanitized historical MATLAB working code
+matlab/historical/                 recovered working scripts, path-sanitized
+matlab/manuscript_analysis/        modular MATLAB implementation of manuscript analyses
+python/reviewer_analyses/          analyses added during peer review
+python/external_map_comparisons/   documented comparison with the Kletenik map
+cluster_localization/              FSL cluster and Harvard-Oxford atlas workflow
+external_maps/                     NeuroVault provenance and downloader
+simnibs/                           electric-field reconstruction workflow
+results/group_maps/                public non-identifiable NIfTI maps
+results/cluster_localization/       frozen cluster tables
+results/verified/                  verified summary tables and vectors
+results/revision/                  reviewer-analysis outputs and null distributions
+data/                               restricted input schemas only
+docs/                               provenance, crosswalk, protocol coverage and availability statements
+tools/                              audit and manifest utilities
 ```
 
-## Scope
+## Main protocol coverage
 
-The public release reproduces the analyses that can be validated from the available final
-connectivity matrices and behavioral tables:
+- Dataset 1 partial Pearson map: SF-02 adjusted for SF-03–SF-12, SF-17–SF-32 and lesion size.
+- Dataset 2 partial Pearson map: NRS-02 adjusted for the other 26 NRS items and lesion size.
+- Fisher-z spatial correspondence and participant-level cross-dataset prediction.
+- NRS item-level analyses both with all other NRS items plus lesion size and with lesion size only.
+- Historical nominal-sample-size weighted combined map.
+- FSL cluster localization using the archived terminal parameters.
+- Reviewer-requested anatomy-conditioned permutation and corrected two-sided maximum-statistic analysis.
+- Additional Dataset 1 disability, mood and sex controls.
+- External anosognosia-map retrieval and a documented comparison workflow.
+- Target-connectivity output and SimNIBS modelling parameters.
 
-1. primary voxelwise partial-correlation maps;
-2. cross-dataset spatial correspondence;
-3. Dataset 1-to-Dataset 2 prediction;
-4. NRS item-level map comparison;
-5. no-covariate sensitivity analysis underlying Supplementary Figure S1;
-6. anatomy-conditioned permutation analysis;
-7. sample-size-weighted combined map;
-8. two-sided whole-brain maximum-statistic family-wise error correction;
-9. NIfTI export of group-level vectors.
+See `docs/PROTOCOL_COVERAGE.md` and `docs/ANALYSIS_CROSSWALK.csv` for the result-by-result audit.
 
-TFCE, split-half validation and five-fold cross-validation were exploratory historical analyses
-and are not part of the revised manuscript.
+## Restricted inputs
 
-## Data access
+Participant-level clinical data, identifiers, individual lesion masks, participant-derived connectivity matrices, the normative connectome and institutional processing infrastructure are not redistributed. The modular scripts expect authorized local copies of the four files described in `data/README.md`. The optional Dataset 1 control analysis uses a de-identified aligned control file.
 
-Participant-level and participant-derived input files are not included. Access is subject to
-the policies, legal requirements and ethical approvals of the institutions responsible for the
-two original cohorts. Frozen non-identifiable outputs are supplied for transparent review.
+## Reproducibility boundaries
 
-## Citation and versioning
+The primary analyses begin from precomputed participant-level lesion-connectivity maps. The upstream lesion-to-connectome processing and normative connectome are maintained separately. The stimulation-target map was generated by processing the final combined group map through the Center for Brain Circuit Therapeutics normative-connectome targeting pipeline; the input and resulting group-level output are supplied, while the upstream infrastructure is not redistributed.
 
-Use the exact tagged release archived for the journal revision. Update `CITATION.cff` with the
-final repository DOI after Zenodo archiving.
+The historically reported anosognosia comparison p-value is not treated as independently verified in this release. The repository provides the authoritative public-map downloader and an explicit revised permutation workflow so that the manuscript can report a documented result.
 
-## License
+## Software
 
-MIT License applies to code only. Data, historical group-level maps and third-party resources
-remain subject to their respective permissions.
+- MATLAB R2023a with Statistics and Machine Learning Toolbox
+- Python 3.10 or later
+- FSL 6.0.6 or later for `fsl-cluster` and `atlasq`
+- SimNIBS 4.1.0
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+## Verification status
+
+The public maps, summary statistics, permutation outputs, target coordinates, SimNIBS parameters and frozen cluster tables have been audited. The modular MATLAB implementation was cross-checked against the recovered working scripts and final input schemas, but was not executed end-to-end in the release environment because MATLAB and restricted inputs were unavailable there. The repository deliberately distinguishes verified outputs from executable code requiring authorized data.
+
+## Citation and license
+
+Please cite the manuscript and the versioned software release. Citation metadata are in `CITATION.cff`. Code is released under the MIT License; external maps retain their source attribution and terms.

@@ -1,0 +1,16 @@
+analysis,manuscript_component,implementation,script,frozen_output,status
+Dataset 1 primary map,Methods/Results/Figure 2,MATLAB,matlab/manuscript_analysis/run_primary_maps.m,results/group_maps/dataset1_primary_partial_r.nii.gz,verified
+Dataset 2 primary map,Methods/Results/Figure 4a,MATLAB,matlab/manuscript_analysis/run_primary_maps.m,results/group_maps/dataset2_primary_partial_r.nii.gz,verified
+Cross-dataset spatial correspondence,Results/Figure 5,MATLAB,matlab/manuscript_analysis/run_cross_dataset_correspondence.m,results/verified/core_results_verified.json,verified observed r; original historical null not preserved
+Dataset 1 map predicting Dataset 2,Results/Figure 3,MATLAB,matlab/manuscript_analysis/run_cross_dataset_prediction.m,results/verified/figure3_prediction_verified.csv,verified
+NRS item-level comparison,Results/Figure 4b,MATLAB,matlab/manuscript_analysis/run_nrs_item_level_analysis.m,results/verified/nrs_item_level_correlations_adjusted_and_lesion_size_only.csv,adjusted and lesion-size-only implementations supplied; frozen summary verified
+Historical combined map,Results/Figure 5,MATLAB,matlab/manuscript_analysis/run_historical_combined_map.m,results/group_maps/combined_lesion_associated_map_historical.nii.gz,group output verified
+Historical Westfall-Young,Historical provenance,MATLAB,matlab/historical/03_Westfall_Young_Peak_Correction_historical_sanitized.m,,historical working implementation only
+Anatomy-conditioned permutation,Reviewer 1 comment 5,Python,python/reviewer_analyses/01_anatomy_conditioned_permutation.py,results/revision/anatomy_conditioned_summary.csv,verified 100000 permutations
+Corrected maximum-statistic,Revised whole-brain inference,Python,python/reviewer_analyses/02_corrected_maximum_statistic.py,results/revision/corrected_maxstat_summary.csv,verified 10000 permutations
+Additional Dataset 1 controls,Additional control analyses,MATLAB,matlab/manuscript_analysis/run_dataset1_additional_controls.m,results/verified/dataset1_additional_controls_verified.csv,verified aggregate outputs
+No-covariate sensitivity,Supplementary Figure S1,MATLAB,matlab/manuscript_analysis/run_supplementary_no_covariates.m,results/group_maps/dataset1_no_covariates_r.nii.gz; results/group_maps/dataset2_no_covariates_r.nii.gz,verified
+Target-connectivity map,Target identification,External CBCT pipeline,,results/group_maps/target_connectivity_map.nii.gz,input/output supplied; upstream infrastructure not redistributed
+SimNIBS modelling,Figure 6,SimNIBS 4.1,simnibs/reproduce_simulations.py,simnibs/parameters.json,placement matrices and final log summaries recovered
+Anosognosia comparison,Additional control analysis,Python + public NeuroVault group map,python/external_map_comparisons/compare_with_kletenik_anosognosia.py,,public comparator downloader and revised permutation workflow supplied; historical p=0.93 not independently verified
+Cluster localization,"Figures 2d, 4a and 5d / Supplementary Table S4",FSL fsl-cluster + atlasq,cluster_localization/run_fsl_cluster_localization.sh,results/cluster_localization/,"exact historical thresholds, 26-connectivity and 40-voxel extent documented; frozen geometry tables supplied"

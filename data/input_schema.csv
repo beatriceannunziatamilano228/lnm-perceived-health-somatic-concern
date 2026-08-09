@@ -1,0 +1,8 @@
+file,variable,shape,columns_or_dimension,publicly_distributed
+Corbettaconnectivitymaps101.mat,CorbettaFinal,285903 x 101,voxels x Dataset 1 participants,no
+CorbettaSF02_controls.mat,question2_controls,101 x 28,"SF-02; SF-03–12; SF-17–32; lesion size",no
+GrafmanmapsnoNaN.mat,Grafman2.mapsCopy,285903 x 181,voxels x Dataset 2 participants,no
+NBRwithoutNaN_NBR02column1.mat,NBRwithoutNaN_NBR02column1,181 x 28,"NRS-02; NRS-01; NRS-03–27; lesion size",no
+Corbetta_additional_controls.mat,multiple vectors,101 rows,additional Dataset 1 control variables,no
+combined_lesion_associated_map_historical.nii.gz,group map,91 x 109 x 91,2-mm MNI grid,yes
+target_connectivity_map.nii.gz,group map,91 x 109 x 91,2-mm MNI grid,yes

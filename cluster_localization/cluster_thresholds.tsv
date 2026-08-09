@@ -1,0 +1,4 @@
+map_id	input_map	positive_threshold_r	connectivity	minimum_extent_voxels	voxel_volume_mm3	minimum_extent_mm3	provenance
+dataset1	results/group_maps/dataset1_primary_partial_r.nii.gz	0.310	26	40	8	320	historical FSL terminal workflow; cluster sizes reproduce archived terminal output
+dataset2	results/group_maps/dataset2_primary_partial_r.nii.gz	0.235	26	40	8	320	historical FSL terminal command visible in archived terminal output
+combined	results/group_maps/combined_lesion_associated_map_historical.nii.gz	0.190	26	40	8	320	historical FSL terminal command visible in archived terminal output

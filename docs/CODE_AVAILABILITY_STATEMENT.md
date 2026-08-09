@@ -1,8 +1,5 @@
 # Code availability statement
 
-Validated analysis code and non-identifiable group-level outputs are available in a public,
-versioned repository at **[insert GitHub URL]**, archived at **[insert Zenodo DOI]**. The
-repository contains the Python implementation used to validate the voxelwise lesion-network
-analyses, cross-dataset analyses, item-level comparison, anatomy-conditioned permutation
-analysis, combined-map generation, and whole-brain maximum-statistic correction. The exact
-release used for the revised manuscript is identified by its version tag and archived DOI.
+Validated analysis code and non-identifiable group-level outputs are available in a public, versioned GitHub repository at `[GITHUB URL]`, archived at `[ZENODO DOI]`. The repository contains recovered historical MATLAB code, modular MATLAB implementations of the manuscript analyses, FSL cluster-localization commands, Python analyses introduced during peer review, the public external-map retrieval/comparison workflow, frozen summary outputs and SimNIBS reconstruction parameters.
+
+The upstream normative-connectome targeting infrastructure used to generate the stimulation-target map is maintained separately by the Center for Brain Circuit Therapeutics and is not redistributed. The final combined group-level input map and resulting group-level target-connectivity map are included.

@@ -1,0 +1,15 @@
+{
+  "dataset1_primary_analytic_n": 101,
+  "dataset2_cohort_n": 181,
+  "dataset2_primary_complete_case_n": 173,
+  "cross_dataset_spatial_r_raw_maps": 0.59019485205979,
+  "cross_dataset_spatial_r_fisher_z_maps": 0.5887611658624601,
+  "figure3_forward_spearman_rho": 0.23272094124980391,
+  "figure3_forward_spearman_p_two_sided": 0.0016179603516363647,
+  "supplementary_S1_dataset1_spatial_r": 0.8261243002465888,
+  "supplementary_S1_dataset2_spatial_r": 0.8325776243361058,
+  "historical_combined_formula_recovered_master_script": "(101*atanh(dataset1_r) + 181*atanh(dataset2_r))/282",
+  "original_manuscript_cross_dataset_permutation_p_reported": 0.04,
+  "historical_random_seed_and_null_distribution_preserved": false,
+  "note": "Primary and Figure 3 values were independently reconstructed from the final restricted matrices."
+}
