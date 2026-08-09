@@ -31,4 +31,4 @@ The original peak localization was performed interactively in the terminal with 
 
 ## Kletenik external map
 
-The cross-modal awareness/anosognosia comparator is sourced from NeuroVault collection 13792, image 795501, linked to DOI 10.1002/ana.26709. The authoritative image is downloaded from NeuroVault rather than duplicated. The historical p-value was not accompanied by a preserved null distribution; a revised, explicit permutation workflow is therefore supplied separately.
+The cross-modal awareness/anosognosia comparator is sourced from NeuroVault collection 13792, image 795501, linked to DOI 10.1002/ana.26709. The repository documents the source of the comparator and provides a public-map retrieval and spatial-comparison workflow for transparency and reproducibility.
