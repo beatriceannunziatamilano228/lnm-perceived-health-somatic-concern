@@ -16,6 +16,6 @@
 | Corrected maximum statistic | `python/reviewer_analyses/02_corrected_maximum_statistic.py` | Covered; frozen 10,000-permutation null and thresholded map supplied |
 | Additional Dataset 1 controls | `run_dataset1_additional_controls.m` | Covered; de-identified restricted input required |
 | No-covariate sensitivity | `run_supplementary_no_covariates.m` | Covered; group maps supplied |
-| Anosognosia comparison | `external_maps/`; `python/external_map_comparisons/` | Public comparator and code covered; historical p=0.93 not independently verified |
+| Anosognosia comparison | `external_maps/`; `python/external_map_comparisons/` | Published comparator source and spatial-comparison workflow documented
 | Target-connectivity map | public input/output maps and provenance statement | Output covered; upstream CBCT connectome infrastructure not redistributed |
 | SimNIBS Figure 6 | `simnibs/` | Placement matrices and workflow covered; original software logs are not published because they contained personal paths |
