@@ -1,4 +1,4 @@
-# Frozen non-identifiable results
+# Non-identifiable results
 
 ## `group_maps/`
 
