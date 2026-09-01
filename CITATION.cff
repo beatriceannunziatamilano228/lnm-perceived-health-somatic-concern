@@ -3,7 +3,7 @@ message: "Please cite the accompanying manuscript and this software release."
 title: "Analysis code for lesion network mapping of perceived health and somatic concern"
 type: software
 version: 1.1.0
-date-released: 2026-08-06
+date-released: 2026-09-01
 url: "https://github.com/beatriceannunziatamilano228/lnm-perceived-health-somatic-concern"
 authors:
   - family-names: Milano
