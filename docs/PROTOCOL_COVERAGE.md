@@ -11,7 +11,7 @@
 | Historical combined map | `run_historical_combined_map.m` | Covered; nominal 101/181 Fisher-z weighting |
 | Cluster localization | `cluster_localization/` | Covered using exact archived thresholds, 26-connectivity and 40-voxel extent |
 | Harvard-Oxford labels | `query_harvard_oxford_labels.py` | Covered; requires local FSL atlases |
-| Historical Westfall–Young code | `matlab/historical/` | Preserved for provenance; revised inference is separate |
+| Historical Westfall–Young code | `matlab/historical/` | Preserved for provenance
 | Anatomy-conditioned reviewer test | `python/reviewer_analyses/01_anatomy_conditioned_permutation.py` | Covered; frozen 100,000-permutation null supplied |
 | Additional Dataset 1 controls | `run_dataset1_additional_controls.m` | Covered; de-identified restricted input required |
 | No-covariate sensitivity | `run_supplementary_no_covariates.m` | Covered; group maps supplied |
