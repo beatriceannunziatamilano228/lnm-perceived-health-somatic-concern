@@ -7,7 +7,6 @@ NRS item-level comparison,Results/Figure 4b,MATLAB,matlab/manuscript_analysis/ru
 Historical combined map,Results/Figure 5,MATLAB,matlab/manuscript_analysis/run_historical_combined_map.m,results/group_maps/combined_lesion_associated_map_historical.nii.gz,group output verified
 Historical Westfall-Young,Historical provenance,MATLAB,matlab/historical/03_Westfall_Young_Peak_Correction_historical_sanitized.m,,historical working implementation only
 Anatomy-conditioned permutation,Reviewer 1 comment 5,Python,python/reviewer_analyses/01_anatomy_conditioned_permutation.py,results/revision/anatomy_conditioned_summary.csv,verified 100000 permutations
-Corrected maximum-statistic,Revised whole-brain inference,Python,python/reviewer_analyses/02_corrected_maximum_statistic.py,results/revision/corrected_maxstat_summary.csv,verified 10000 permutations
 Additional Dataset 1 controls,Additional control analyses,MATLAB,matlab/manuscript_analysis/run_dataset1_additional_controls.m,results/verified/dataset1_additional_controls_verified.csv,verified aggregate outputs
 No-covariate sensitivity,Supplementary Figure S1,MATLAB,matlab/manuscript_analysis/run_supplementary_no_covariates.m,results/group_maps/dataset1_no_covariates_r.nii.gz; results/group_maps/dataset2_no_covariates_r.nii.gz,verified
 Target-connectivity map,Target identification,External CBCT pipeline,,results/group_maps/target_connectivity_map.nii.gz,input/output supplied; upstream infrastructure not redistributed
