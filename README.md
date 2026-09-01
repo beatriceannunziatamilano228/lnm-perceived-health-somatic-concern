@@ -10,7 +10,7 @@ This release separates five analytically distinct components:
 
 1. **Recovered historical MATLAB code** — path-sanitized working scripts retained for provenance.
 2. **Modular MATLAB manuscript analyses** — primary maps, cross-dataset analyses, item-level comparisons, historical combined map, additional Dataset 1 controls and no-covariate sensitivity analyses.
-3. **Python analyses introduced during peer review** — anatomy-conditioned permutation and corrected maximum-statistic inference.
+3. **Python analyses introduced during peer review** — anatomy-conditioned permutation.
 4. **FSL cluster localization** — exact historical r thresholds, 26-connectivity, 40-voxel/320 mm³ extent criterion, frozen cluster tables and Harvard-Oxford atlas queries.
 5. **External and stimulation workflows** — NeuroVault-based anosognosia-map retrieval/comparison, the externally generated group-level target-connectivity output, and SimNIBS reconstruction parameters.
 
@@ -43,7 +43,7 @@ tools/                              audit and manifest utilities
 - NRS item-level analyses both with all other NRS items plus lesion size and with lesion size only.
 - Historical nominal-sample-size weighted combined map.
 - FSL cluster localization using the archived terminal parameters.
-- Reviewer-requested anatomy-conditioned permutation and corrected two-sided maximum-statistic analysis.
+- Reviewer-requested anatomy-conditioned permutation.
 - Additional Dataset 1 disability, mood and sex controls.
 - External anosognosia-map retrieval and a documented comparison workflow.
 - Target-connectivity output and SimNIBS modelling parameters.
