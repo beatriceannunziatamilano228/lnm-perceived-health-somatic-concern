@@ -17,5 +17,4 @@ Frozen cluster geometry tables reconstructed with the exact archived thresholds,
 Summary tables and arrays independently reconstructed from the currently available final analysis matrices. The item-level table includes both fully adjusted and lesion-size-only comparisons. No participant identifiers or participant-level clinical records are included.
 
 ## `revision/`
-
-Reviewer-requested and corrected inferential outputs, including frozen permutation null distributions and corrected whole-brain maps.
+Anatomy-conditioned permutation outputs
