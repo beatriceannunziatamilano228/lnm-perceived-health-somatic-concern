@@ -13,7 +13,6 @@
 | Harvard-Oxford labels | `query_harvard_oxford_labels.py` | Covered; requires local FSL atlases |
 | Historical Westfall–Young code | `matlab/historical/` | Preserved for provenance; revised inference is separate |
 | Anatomy-conditioned reviewer test | `python/reviewer_analyses/01_anatomy_conditioned_permutation.py` | Covered; frozen 100,000-permutation null supplied |
-| Corrected maximum statistic | `python/reviewer_analyses/02_corrected_maximum_statistic.py` | Covered; frozen 10,000-permutation null and thresholded map supplied |
 | Additional Dataset 1 controls | `run_dataset1_additional_controls.m` | Covered; de-identified restricted input required |
 | No-covariate sensitivity | `run_supplementary_no_covariates.m` | Covered; group maps supplied |
 | Anosognosia comparison | `external_maps/`; `python/external_map_comparisons/` | Published comparator source and spatial-comparison workflow documented
