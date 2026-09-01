@@ -10,7 +10,7 @@ The original analyses were conducted in MATLAB R2023a. The repository includes t
 
 ## Peer-review analyses
 
-The anatomy-conditioned permutation and corrected maximum-statistic analyses were added during peer review and implemented in Python. They are separated from the historical MATLAB code and accompanied by frozen outputs.
+The anatomy-conditioned permutation was added during peer review and implemented in Python. Separated from the historical MATLAB code and accompanied by frozen outputs.
 
 ## Stimulation-target map
 
